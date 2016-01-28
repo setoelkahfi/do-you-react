@@ -9,23 +9,23 @@
 	<script type="text/jsx;harmony=true">
 	var Counter = React.createClass({
 
-		getInitialState: function() {
+		getInitialState() {
 			return {
 				count: 0
 			}
 		},
 
-		add: function() {
+		add() {
 			var count = this.state.count + 1;
 			this.setState({ count });
 		},
 
-		subtract: function() {
+		subtract() {
 			var count = this.state.count - 1;
 			this.setState({ count });
 		},
 
-		render: function() {
+		render() {
 
 			return (
 				<div>
