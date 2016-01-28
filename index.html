@@ -2,19 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-</head>
-<body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+</head>
+<body>
 	
 	<script type="text/jsx">
-	var HelloWorld = React.createClass({
+	var Avatar = React.createClass({
+
+		getDefaultProps: function() {
+		 	return { 
+		 		path: 'https://id.gravatar.com/userimage/6222337/3ccce07555cc79b006310995ddca6b19.jpg?size=200'
+		 	};
+		},
 
 		render: function() {
-			return <h1>Hello World!</h1>;
+			return (
+				<div>
+					<a href={this.props.path}>
+						<img src={this.props.path} />
+					</a>
+				</div>
+			);
 		}
+
 	});
-	React.render(<HelloWorld/>, document.body);
+	React.render(<Avatar />, document.body);
 	</script>	
 </body>
 </html>
