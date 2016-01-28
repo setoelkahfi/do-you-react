@@ -2,10 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
 </head>
-<body>	
-	<script type="text/jsx" src="js/component/Avatar.js"></script>	
+<body>
+
+	<h1>Counter: <span id="count">0</span></h1>
+
+	<button id="subtract">Subtract 1</button>
+	<button id="add">Add 1</button>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript">
+	$('#add').on('click', function() {
+		var counter = $('#count');
+		var count = parseInt(counter.text());
+		counter.text(count + 1);
+	});
+
+	$('#subtract').on('click', function() {
+		var counter = $('#count');
+		var count = parseInt(counter.text());
+		counter.text(count - 1);
+	});
+	</script>
 </body>
 </html>
